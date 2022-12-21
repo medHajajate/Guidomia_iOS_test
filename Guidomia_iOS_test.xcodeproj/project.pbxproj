@@ -99,13 +99,12 @@
 		2B13A1E82953AC9900894DB7 /* Guidomia_iOS_test */ = {
 			isa = PBXGroup;
 			children = (
-				2B13A1E92953AC9900894DB7 /* AppDelegate.swift */,
-				2B13A1EB2953AC9900894DB7 /* SceneDelegate.swift */,
-				2B13A1ED2953AC9900894DB7 /* ViewController.swift */,
-				2B13A1EF2953AC9900894DB7 /* Main.storyboard */,
-				2B13A1F22953AC9E00894DB7 /* Assets.xcassets */,
-				2B13A1F42953AC9E00894DB7 /* LaunchScreen.storyboard */,
-				2B13A1F72953AC9E00894DB7 /* Info.plist */,
+				2B13A21E2953AE9F00894DB7 /* Services */,
+				2B13A21D2953AE9700894DB7 /* Models */,
+				2B13A21C2953AE6F00894DB7 /* Extensions */,
+				2B13A21B2953AE5D00894DB7 /* Flows */,
+				2B13A21A2953AE3300894DB7 /* Resources */,
+				2B13A2192953AE1B00894DB7 /* AppConfig */,
 			);
 			path = Guidomia_iOS_test;
 			sourceTree = "<group>";
@@ -125,6 +124,55 @@
 				2B13A20C2953AC9E00894DB7 /* Guidomia_iOS_testUITestsLaunchTests.swift */,
 			);
 			path = Guidomia_iOS_testUITests;
+			sourceTree = "<group>";
+		};
+		2B13A2192953AE1B00894DB7 /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				2B13A1EB2953AC9900894DB7 /* SceneDelegate.swift */,
+				2B13A1F72953AC9E00894DB7 /* Info.plist */,
+				2B13A1E92953AC9900894DB7 /* AppDelegate.swift */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		2B13A21A2953AE3300894DB7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B13A1F42953AC9E00894DB7 /* LaunchScreen.storyboard */,
+				2B13A1F22953AC9E00894DB7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B13A21B2953AE5D00894DB7 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				2B13A1ED2953AC9900894DB7 /* ViewController.swift */,
+				2B13A1EF2953AC9900894DB7 /* Main.storyboard */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		2B13A21C2953AE6F00894DB7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B13A21D2953AE9700894DB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B13A21E2953AE9F00894DB7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,7 +487,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 44M37ZLK2F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Guidomia_iOS_test/Info.plist;
+				INFOPLIST_FILE = Guidomia_iOS_test/AppConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -467,7 +515,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 44M37ZLK2F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Guidomia_iOS_test/Info.plist;
+				INFOPLIST_FILE = Guidomia_iOS_test/AppConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
