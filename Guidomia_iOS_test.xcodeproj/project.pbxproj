@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		107C4AE92954E23F0078893A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AE82954E23F0078893A /* AppCoordinator.swift */; };
+		107C4AED2954E30C0078893A /* CarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AEB2954E30C0078893A /* CarsListViewController.swift */; };
+		107C4AEE2954E30C0078893A /* CarsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C4AEC2954E30C0078893A /* CarsListViewController.xib */; };
+		107C4AF02954E6FB0078893A /* CarsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AEF2954E6FB0078893A /* CarsFlowCoordinator.swift */; };
 		2B13A1EA2953AC9900894DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B13A1E92953AC9900894DB7 /* AppDelegate.swift */; };
 		2B13A1EC2953AC9900894DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B13A1EB2953AC9900894DB7 /* SceneDelegate.swift */; };
-		2B13A1EE2953AC9900894DB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B13A1ED2953AC9900894DB7 /* ViewController.swift */; };
-		2B13A1F12953AC9900894DB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B13A1EF2953AC9900894DB7 /* Main.storyboard */; };
 		2B13A1F32953AC9E00894DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B13A1F22953AC9E00894DB7 /* Assets.xcassets */; };
 		2B13A1F62953AC9E00894DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B13A1F42953AC9E00894DB7 /* LaunchScreen.storyboard */; };
 		2B13A2012953AC9E00894DB7 /* Guidomia_iOS_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B13A2002953AC9E00894DB7 /* Guidomia_iOS_testTests.swift */; };
@@ -36,11 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		107C4AE82954E23F0078893A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		107C4AEB2954E30C0078893A /* CarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewController.swift; sourceTree = "<group>"; };
+		107C4AEC2954E30C0078893A /* CarsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsListViewController.xib; sourceTree = "<group>"; };
+		107C4AEF2954E6FB0078893A /* CarsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsFlowCoordinator.swift; sourceTree = "<group>"; };
 		2B13A1E62953AC9900894DB7 /* Guidomia_iOS_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidomia_iOS_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B13A1E92953AC9900894DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B13A1EB2953AC9900894DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B13A1ED2953AC9900894DB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2B13A1F02953AC9900894DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B13A1F22953AC9E00894DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B13A1F52953AC9E00894DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B13A1F72953AC9E00894DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +80,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		107C4AEA2954E2E50078893A /* CarsList */ = {
+			isa = PBXGroup;
+			children = (
+				107C4AEB2954E30C0078893A /* CarsListViewController.swift */,
+				107C4AEC2954E30C0078893A /* CarsListViewController.xib */,
+			);
+			path = CarsList;
+			sourceTree = "<group>";
+		};
+		107C4AF12954E8D60078893A /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				107C4AEF2954E6FB0078893A /* CarsFlowCoordinator.swift */,
+				107C4AEA2954E2E50078893A /* CarsList */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
 		2B13A1DD2953AC9900894DB7 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +154,7 @@
 				2B13A1EB2953AC9900894DB7 /* SceneDelegate.swift */,
 				2B13A1F72953AC9E00894DB7 /* Info.plist */,
 				2B13A1E92953AC9900894DB7 /* AppDelegate.swift */,
+				107C4AE82954E23F0078893A /* AppCoordinator.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -148,8 +171,7 @@
 		2B13A21B2953AE5D00894DB7 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				2B13A1ED2953AC9900894DB7 /* ViewController.swift */,
-				2B13A1EF2953AC9900894DB7 /* Main.storyboard */,
+				107C4AF12954E8D60078893A /* Cars */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -281,7 +303,7 @@
 			files = (
 				2B13A1F62953AC9E00894DB7 /* LaunchScreen.storyboard in Resources */,
 				2B13A1F32953AC9E00894DB7 /* Assets.xcassets in Resources */,
-				2B13A1F12953AC9900894DB7 /* Main.storyboard in Resources */,
+				107C4AEE2954E30C0078893A /* CarsListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B13A1EE2953AC9900894DB7 /* ViewController.swift in Sources */,
+				107C4AF02954E6FB0078893A /* CarsFlowCoordinator.swift in Sources */,
+				107C4AE92954E23F0078893A /* AppCoordinator.swift in Sources */,
+				107C4AED2954E30C0078893A /* CarsListViewController.swift in Sources */,
 				2B13A1EA2953AC9900894DB7 /* AppDelegate.swift in Sources */,
 				2B13A1EC2953AC9900894DB7 /* SceneDelegate.swift in Sources */,
 			);
@@ -345,14 +369,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2B13A1EF2953AC9900894DB7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B13A1F02953AC9900894DB7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2B13A1F42953AC9E00894DB7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -490,7 +506,7 @@
 				INFOPLIST_FILE = Guidomia_iOS_test/AppConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -518,7 +534,7 @@
 				INFOPLIST_FILE = Guidomia_iOS_test/AppConfig/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
