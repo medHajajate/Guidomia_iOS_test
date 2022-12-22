@@ -18,7 +18,7 @@ class CarsFlowCoordinator: Coordinator {
     }
     
     func start() {
-        let carsListViewController = CarsListViewController()
+        let carsListViewController = CarsListViewController.instantiate(viewModel: CarsListViewModel())
         self.navigationController.pushViewController(carsListViewController, animated: true)
     }
     

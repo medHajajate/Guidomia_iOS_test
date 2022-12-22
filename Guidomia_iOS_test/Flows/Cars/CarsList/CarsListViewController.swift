@@ -8,14 +8,23 @@
 import UIKit
 
 class CarsListViewController: UIViewController {
+    
+    // MARK: - Initializers
 
+    static func instantiate(viewModel: CarsListViewModel) -> CarsListViewController {
+        let controller = CarsListViewController()
+        viewModel.delegate = controller
+        controller.viewModel = viewModel
+        return controller
+    }
+    
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
     
-    
+    var viewModel: CarsListViewModel!
     
     // MARK: - ViewLifecycle
     
@@ -23,6 +32,7 @@ class CarsListViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Guidomia".uppercased()
         setupTableView()
+        self.viewModel.fetchList()
     }
     
 }
@@ -38,7 +48,13 @@ extension CarsListViewController {
     }
 }
 
+extension CarsListViewController: CarsListViewModelDelegate {
+    // MARK: CarsListViewModelDelegate
+    
+}
+
 extension CarsListViewController: UITableViewDelegate, UITableViewDataSource {
+    // MARK: UITableViewDataSource, UITableViewDelegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
