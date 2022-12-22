@@ -14,6 +14,7 @@ class CarsFlowCoordinator: Coordinator {
     
     init(navigationController : UINavigationController) {
         self.navigationController = navigationController
+        self.setupNavigation()
     }
     
     func start() {
@@ -21,4 +22,16 @@ class CarsFlowCoordinator: Coordinator {
         self.navigationController.pushViewController(carsListViewController, animated: true)
     }
     
+    private func setupNavigation() {
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .orange
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+
+        navigationController.navigationBar.tintColor = UIColor.orange
+        navigationController.navigationBar.standardAppearance = appearance
+        navigationController.navigationBar.compactAppearance = appearance
+        navigationController.navigationBar.scrollEdgeAppearance = appearance
+    }
 }

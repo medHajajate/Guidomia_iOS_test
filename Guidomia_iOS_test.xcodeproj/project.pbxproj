@@ -11,6 +11,13 @@
 		107C4AED2954E30C0078893A /* CarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AEB2954E30C0078893A /* CarsListViewController.swift */; };
 		107C4AEE2954E30C0078893A /* CarsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C4AEC2954E30C0078893A /* CarsListViewController.xib */; };
 		107C4AF02954E6FB0078893A /* CarsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AEF2954E6FB0078893A /* CarsFlowCoordinator.swift */; };
+		107C4AF62954ED3B0078893A /* CarInfosViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AF42954ED3B0078893A /* CarInfosViewCell.swift */; };
+		107C4AF72954ED3B0078893A /* CarInfosViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C4AF52954ED3B0078893A /* CarInfosViewCell.xib */; };
+		107C4AF92954ED440078893A /* CarsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AF82954ED440078893A /* CarsListViewModel.swift */; };
+		107C4AFB2954F7F40078893A /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AFA2954F7F40078893A /* NSObject+Extension.swift */; };
+		107C4AFE2954FA080078893A /* CarsListSeparationViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AFD2954FA080078893A /* CarsListSeparationViewFooter.swift */; };
+		107C4B002954FA0F0078893A /* CarsListSeparationViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C4AFF2954FA0F0078893A /* CarsListSeparationViewFooter.xib */; };
+		107C4B022954FD020078893A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4B012954FD020078893A /* UIColor+Extension.swift */; };
 		2B13A1EA2953AC9900894DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B13A1E92953AC9900894DB7 /* AppDelegate.swift */; };
 		2B13A1EC2953AC9900894DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B13A1EB2953AC9900894DB7 /* SceneDelegate.swift */; };
 		2B13A1F32953AC9E00894DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B13A1F22953AC9E00894DB7 /* Assets.xcassets */; };
@@ -42,6 +49,13 @@
 		107C4AEB2954E30C0078893A /* CarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewController.swift; sourceTree = "<group>"; };
 		107C4AEC2954E30C0078893A /* CarsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsListViewController.xib; sourceTree = "<group>"; };
 		107C4AEF2954E6FB0078893A /* CarsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsFlowCoordinator.swift; sourceTree = "<group>"; };
+		107C4AF42954ED3B0078893A /* CarInfosViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfosViewCell.swift; sourceTree = "<group>"; };
+		107C4AF52954ED3B0078893A /* CarInfosViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarInfosViewCell.xib; sourceTree = "<group>"; };
+		107C4AF82954ED440078893A /* CarsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewModel.swift; sourceTree = "<group>"; };
+		107C4AFA2954F7F40078893A /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSObject+Extension.swift"; path = "Guidomia_iOS_test/Flows/Cars/CarsList/NSObject+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		107C4AFD2954FA080078893A /* CarsListSeparationViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListSeparationViewFooter.swift; sourceTree = "<group>"; };
+		107C4AFF2954FA0F0078893A /* CarsListSeparationViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsListSeparationViewFooter.xib; sourceTree = "<group>"; };
+		107C4B012954FD020078893A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "Guidomia_iOS_test/Flows/Cars/CarsList/Views/CarsListSeparationViewFooter/UIColor+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		2B13A1E62953AC9900894DB7 /* Guidomia_iOS_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidomia_iOS_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B13A1E92953AC9900894DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B13A1EB2953AC9900894DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +97,8 @@
 		107C4AEA2954E2E50078893A /* CarsList */ = {
 			isa = PBXGroup;
 			children = (
+				107C4AF22954ECDE0078893A /* Views */,
+				107C4AF82954ED440078893A /* CarsListViewModel.swift */,
 				107C4AEB2954E30C0078893A /* CarsListViewController.swift */,
 				107C4AEC2954E30C0078893A /* CarsListViewController.xib */,
 			);
@@ -96,6 +112,33 @@
 				107C4AEA2954E2E50078893A /* CarsList */,
 			);
 			path = Cars;
+			sourceTree = "<group>";
+		};
+		107C4AF22954ECDE0078893A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				107C4AFC2954F9AC0078893A /* CarsListSeparationViewFooter */,
+				107C4AF32954ECED0078893A /* CarInfosViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		107C4AF32954ECED0078893A /* CarInfosViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				107C4AF42954ED3B0078893A /* CarInfosViewCell.swift */,
+				107C4AF52954ED3B0078893A /* CarInfosViewCell.xib */,
+			);
+			path = CarInfosViewCell;
+			sourceTree = "<group>";
+		};
+		107C4AFC2954F9AC0078893A /* CarsListSeparationViewFooter */ = {
+			isa = PBXGroup;
+			children = (
+				107C4AFD2954FA080078893A /* CarsListSeparationViewFooter.swift */,
+				107C4AFF2954FA0F0078893A /* CarsListSeparationViewFooter.xib */,
+			);
+			path = CarsListSeparationViewFooter;
 			sourceTree = "<group>";
 		};
 		2B13A1DD2953AC9900894DB7 = {
@@ -179,6 +222,8 @@
 		2B13A21C2953AE6F00894DB7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				107C4AFA2954F7F40078893A /* NSObject+Extension.swift */,
+				107C4B012954FD020078893A /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,7 +346,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107C4B002954FA0F0078893A /* CarsListSeparationViewFooter.xib in Resources */,
 				2B13A1F62953AC9E00894DB7 /* LaunchScreen.storyboard in Resources */,
+				107C4AF72954ED3B0078893A /* CarInfosViewCell.xib in Resources */,
 				2B13A1F32953AC9E00894DB7 /* Assets.xcassets in Resources */,
 				107C4AEE2954E30C0078893A /* CarsListViewController.xib in Resources */,
 			);
@@ -329,10 +376,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				107C4AF02954E6FB0078893A /* CarsFlowCoordinator.swift in Sources */,
+				107C4AF62954ED3B0078893A /* CarInfosViewCell.swift in Sources */,
+				107C4AF92954ED440078893A /* CarsListViewModel.swift in Sources */,
+				107C4AFE2954FA080078893A /* CarsListSeparationViewFooter.swift in Sources */,
+				107C4AFB2954F7F40078893A /* NSObject+Extension.swift in Sources */,
 				107C4AE92954E23F0078893A /* AppCoordinator.swift in Sources */,
 				107C4AED2954E30C0078893A /* CarsListViewController.swift in Sources */,
 				2B13A1EA2953AC9900894DB7 /* AppDelegate.swift in Sources */,
 				2B13A1EC2953AC9900894DB7 /* SceneDelegate.swift in Sources */,
+				107C4B022954FD020078893A /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

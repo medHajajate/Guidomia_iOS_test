@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21507"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CarsListSeparationViewFooter" customModule="Guidomia_iOS_test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="24"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sW-RX-mQm">
+                    <rect key="frame" x="20" y="10" width="335" height="4"/>
+                    <color key="backgroundColor" name="orange_color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="mBt-u8-d2q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7sW-RX-mQm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="mJc-Za-LN2"/>
+                <constraint firstAttribute="trailing" secondItem="7sW-RX-mQm" secondAttribute="trailing" constant="20" id="njS-HD-n9J"/>
+                <constraint firstItem="7sW-RX-mQm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vFi-xQ-9qb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="95" y="27"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="orange_color">
+            <color red="0.9882352941176471" green="0.37647058823529411" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
