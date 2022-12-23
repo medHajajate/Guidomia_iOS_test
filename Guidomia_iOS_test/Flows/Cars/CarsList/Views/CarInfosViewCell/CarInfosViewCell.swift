@@ -15,6 +15,8 @@ class CarInfosViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var prosConStackView: UIStackView!
+
     
     // MARK: - ViewLifecycle
     
@@ -35,6 +37,21 @@ class CarInfosViewCell: UITableViewCell {
         self.nameLabel.text = data.name
         self.priceLabel.text = data.price
         self.ratingLabel.text = data.rating
+        guard let features = data.features, features.count > 0 else {
+            prosConStackView.isHidden = true
+            return
+        }
+        buildProsConsList(features: features)
+    }
+    
+    private func buildProsConsList(features: [CarProsConsView.Data]) {
+        prosConStackView.isHidden = false
+        prosConStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        features.forEach { feat in
+            let view = CarProsConsView.fromNib()
+            view.config(with: feat)
+            prosConStackView.addArrangedSubview(view)
+        }
     }
 
 }
@@ -47,5 +64,7 @@ extension CarInfosViewCell {
         let name: String?
         let price: String?
         let rating: String?
+        var isExpandable: Bool = false
+        let features: [CarProsConsView.Data]?
     }
 }
