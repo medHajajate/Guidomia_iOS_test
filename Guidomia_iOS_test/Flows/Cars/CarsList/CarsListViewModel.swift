@@ -34,11 +34,23 @@ class CarsListViewModel {
             case .success(let list):
                 print(list)
                 self.carsList = self.builder.buildCarsList(cars: list)
+                self.selectedCar(index: self.carsList.startIndex)
                 self.delegate?.reloadData()
             case.failure( let error):
                 self.carsList = []
                 print(error)
             }
+        }
+    }
+    
+    func didSelectCar(index: Int) {
+        selectedCar(index: index)
+        self.delegate?.reloadData()
+    }
+    
+    private func selectedCar(index: Int) {
+        for i in 0 ..< carsList.count {
+            carsList[i].isExpandable = i == index
         }
     }
 }

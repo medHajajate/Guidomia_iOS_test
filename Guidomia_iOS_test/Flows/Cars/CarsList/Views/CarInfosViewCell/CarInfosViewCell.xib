@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5Q-OM-8JU">
-                        <rect key="frame" x="0.0" y="0.0" width="346" height="172"/>
+                        <rect key="frame" x="0.0" y="0.0" width="346" height="107"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2MC-g9-UEg">
-                                <rect key="frame" x="0.0" y="0.0" width="346" height="157"/>
+                                <rect key="frame" x="0.0" y="0.0" width="346" height="92"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIw-Q5-uUr">
                                         <rect key="frame" x="0.0" y="0.0" width="346" height="92"/>
@@ -41,7 +41,7 @@
                                                         <rect key="frame" x="140" y="0.0" width="176" height="77"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9dZ-IQ-Jxp">
-                                                                <rect key="frame" x="0.0" y="0.0" width="176" height="38"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="176" height="43"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4G7-l0-6sd">
                                                                         <rect key="frame" x="0.0" y="0.0" width="176" height="28.666666666666668"/>
@@ -50,7 +50,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Price: 65K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-1k-vIC">
-                                                                        <rect key="frame" x="0.0" y="28.666666666666661" width="176" height="9.3333333333333321"/>
+                                                                        <rect key="frame" x="0.0" y="28.666666666666661" width="176" height="14.333333333333332"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                                         <color key="textColor" name="dark_gray_color"/>
                                                                         <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐ ⭐ ⭐ ⭐ ⭐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTH-ih-fD6">
-                                                                <rect key="frame" x="0.0" y="52" width="176" height="20"/>
+                                                                <rect key="frame" x="0.0" y="57" width="176" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="Rrx-Cz-8K3"/>
                                                                 </constraints>
@@ -67,9 +67,6 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="ZTH-ih-fD6" secondAttribute="bottom" constant="5" id="0Fv-SY-zog"/>
-                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
@@ -82,8 +79,8 @@
                                             <constraint firstAttribute="bottom" secondItem="oXn-jH-GmW" secondAttribute="bottom" id="eZJ-4r-dxh"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-hm-v7o">
-                                        <rect key="frame" x="0.0" y="107" width="346" height="50"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-hm-v7o">
+                                        <rect key="frame" x="0.0" y="92" width="346" height="0.0"/>
                                     </stackView>
                                 </subviews>
                             </stackView>

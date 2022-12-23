@@ -83,4 +83,8 @@ extension CarsListViewController: UITableViewDelegate, UITableViewDataSource {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: CarsListSeparationViewFooter.className) as? CarsListSeparationViewFooter
         return view
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.viewModel.didSelectCar(index: indexPath.section)
+    }
 }

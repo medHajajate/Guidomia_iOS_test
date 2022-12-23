@@ -37,7 +37,7 @@ class CarInfosViewCell: UITableViewCell {
         self.nameLabel.text = data.name
         self.priceLabel.text = data.price
         self.ratingLabel.text = data.rating
-        guard let features = data.features, features.count > 0 else {
+        guard data.isExpandable, let features = data.features, features.count > 0 else {
             prosConStackView.isHidden = true
             return
         }
