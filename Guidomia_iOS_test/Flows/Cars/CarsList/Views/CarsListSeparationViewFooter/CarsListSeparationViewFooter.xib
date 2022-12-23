@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="403" height="24"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2b-Qg-FrE">
-                                <rect key="frame" x="20" y="10" width="363" height="4"/>
+                                <rect key="frame" x="15" y="10" width="373" height="4"/>
                                 <color key="backgroundColor" name="orange_color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="i8I-Xk-6Sd"/>
@@ -31,8 +31,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="H2b-Qg-FrE" firstAttribute="leading" secondItem="zjz-VC-cgf" secondAttribute="leading" constant="20" id="5Xn-Rb-vct"/>
-                            <constraint firstAttribute="trailing" secondItem="H2b-Qg-FrE" secondAttribute="trailing" constant="20" id="IXZ-WC-7Sd"/>
+                            <constraint firstItem="H2b-Qg-FrE" firstAttribute="leading" secondItem="zjz-VC-cgf" secondAttribute="leading" constant="15" id="5Xn-Rb-vct"/>
+                            <constraint firstAttribute="trailing" secondItem="H2b-Qg-FrE" secondAttribute="trailing" constant="15" id="IXZ-WC-7Sd"/>
                             <constraint firstItem="H2b-Qg-FrE" firstAttribute="centerY" secondItem="zjz-VC-cgf" secondAttribute="centerY" id="jYW-iZ-cTe"/>
                         </constraints>
                     </view>

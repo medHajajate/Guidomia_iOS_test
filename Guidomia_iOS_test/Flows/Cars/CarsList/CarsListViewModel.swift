@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CarsListViewModelDelegate: NSObject {
-    
+    func reloadData()
 }
 
 class CarsListViewModel {
@@ -17,7 +17,8 @@ class CarsListViewModel {
     
     weak var delegate: CarsListViewModelDelegate?
     var service: CarsListService
-    var carsList = [Car]()
+    let builder = BuilderCarsList()
+    var carsList = [CarInfosViewCell.Data]()
     
     // MARK: - Initializers
     
@@ -32,7 +33,8 @@ class CarsListViewModel {
             switch result {
             case .success(let list):
                 print(list)
-                self.carsList = list
+                self.carsList = self.builder.buildCarsList(cars: list)
+                self.delegate?.reloadData()
             case.failure( let error):
                 self.carsList = []
                 print(error)

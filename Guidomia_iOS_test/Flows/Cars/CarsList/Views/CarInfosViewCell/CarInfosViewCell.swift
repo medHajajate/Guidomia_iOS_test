@@ -27,5 +27,25 @@ class CarInfosViewCell: UITableViewCell {
     }
     
     // MARK: - Methods
+    
+    func config(with data: Data) {
+        if let icon = data.icon {
+            self.iconView.image = UIImage(named: icon)
+        }
+        self.nameLabel.text = data.name
+        self.priceLabel.text = data.price
+        self.ratingLabel.text = data.rating
+    }
 
+}
+
+
+extension CarInfosViewCell {
+    
+    struct Data {
+        let icon: String?
+        let name: String?
+        let price: String?
+        let rating: String?
+    }
 }

@@ -50,6 +50,9 @@ extension CarsListViewController {
 
 extension CarsListViewController: CarsListViewModelDelegate {
     // MARK: CarsListViewModelDelegate
+    func reloadData() {
+        self.tableView.reloadData()
+    }
     
 }
 
@@ -57,7 +60,7 @@ extension CarsListViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: UITableViewDataSource, UITableViewDelegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return viewModel.carsList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,6 +69,7 @@ extension CarsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CarInfosViewCell.className, for: indexPath) as? CarInfosViewCell {
+            cell.config(with: viewModel.carsList[indexPath.section])
             return cell
         }
         return UITableViewCell()
