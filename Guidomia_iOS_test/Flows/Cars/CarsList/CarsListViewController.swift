@@ -43,6 +43,7 @@ extension CarsListViewController {
     private func setupTableView() {
         self.tableView.register(UINib(nibName: CarInfosViewCell.className, bundle: nil), forCellReuseIdentifier: CarInfosViewCell.className)
         self.tableView.register(UINib(nibName: CarsListSeparationViewFooter.className, bundle: nil), forHeaderFooterViewReuseIdentifier: CarsListSeparationViewFooter.className)
+        self.tableView.register(UINib(nibName: CarFilterHeaderView.className, bundle: nil), forHeaderFooterViewReuseIdentifier: CarFilterHeaderView.className)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -86,5 +87,15 @@ extension CarsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.viewModel.didSelectCar(index: indexPath.section)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard section == 0 else { return nil }
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: CarFilterHeaderView.className) as? CarFilterHeaderView
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return section == 0 ? 440 : 0
     }
 }

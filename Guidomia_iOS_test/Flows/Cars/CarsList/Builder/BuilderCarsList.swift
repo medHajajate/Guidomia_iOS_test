@@ -73,7 +73,7 @@ class BuilderCarsList {
              lineSpacing: CGFloat = 0,
              paragraphSpacing: CGFloat = 0,
              textColor: UIColor = .black,
-             bulletColor: UIColor = UIColor.orange) -> NSAttributedString {
+             bulletColor: UIColor = .orange) -> NSAttributedString {
 
         let textAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: fontText, NSAttributedString.Key.foregroundColor: textColor]
         let bulletAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: fontBullet, NSAttributedString.Key.foregroundColor: bulletColor]

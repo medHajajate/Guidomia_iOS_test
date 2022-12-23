@@ -23,13 +23,13 @@
                                 <constraint firstAttribute="height" constant="20.5" id="cSC-ts-3cx"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                            <color key="textColor" name="dark_gray_color"/>
+                            <color key="textColor" name="textColot"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gK-e1-TpG">
                             <rect key="frame" x="20" y="20.5" width="325" height="19.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="textColot"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -61,8 +61,8 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="dark_gray_color">
-            <color red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="textColot">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
