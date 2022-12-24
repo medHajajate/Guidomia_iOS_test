@@ -62,12 +62,24 @@ class CarsListViewModel {
             self.filterModel = model
             self.applyFilter()
         }
-        self.filterData = self.builder.buildFilterList(cars: cars, filterMake: applyFilterMake, filterModel: applyFilterModel)
+        self.filterData = self.builder.buildFilterList(cars: cars,
+                                                       makeFilter: self.filterMake,
+                                                       modelFilter: self.filterModel,
+                                                       filterMake: applyFilterMake,
+                                                       filterModel: applyFilterModel)
     }
     
     func didSelectCar(index: Int) {
         selectedCar(index: index)
         self.delegate?.reloadData()
+    }
+    
+    func resetFilter() {
+        self.filterModel = nil
+        self.filterMake = nil
+        self.viewDataList = self.builder.buildCarsList(cars: self.cars)
+        buildFilterList(cars: cars)
+        self.didSelectCar(index: self.viewDataList.startIndex)
     }
     
     private func selectedCar(index: Int) {

@@ -32,6 +32,7 @@ class CarsListViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Guidomia".uppercased()
         setupTableView()
+        setupNavigationButton()
         self.viewModel.fetchList()
     }
     
@@ -46,6 +47,17 @@ extension CarsListViewController {
         self.tableView.register(UINib(nibName: CarFilterHeaderView.className, bundle: nil), forHeaderFooterViewReuseIdentifier: CarFilterHeaderView.className)
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func setupNavigationButton() {
+        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshList))
+        refresh.tintColor = .white
+        self.navigationItem.rightBarButtonItem = refresh
+
+    }
+    
+    @objc private func refreshList() {
+        viewModel.resetFilter()
     }
 }
 
@@ -98,6 +110,6 @@ extension CarsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 0 ? 440 : 0
+        return section == 0 ? 440 : 0.1
     }
 }

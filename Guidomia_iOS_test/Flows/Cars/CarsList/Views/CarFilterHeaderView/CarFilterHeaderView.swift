@@ -52,6 +52,7 @@ class CarFilterHeaderView: UITableViewHeaderFooterView {
         makePiker?.dataSource = self
         makeTextField.inputView = makePiker
         makeTextField.inputAccessoryView = setupToolBar(selector: #selector(didSelectMake))
+        makeTextField.text = data?.makeFilter
     }
     
     private func configModelPicker() {
@@ -61,6 +62,7 @@ class CarFilterHeaderView: UITableViewHeaderFooterView {
         modelPiker?.dataSource = self
         modelTextField.inputView = modelPiker
         modelTextField.inputAccessoryView = setupToolBar(selector: #selector(didSelectModel))
+        modelTextField.text = data?.modelFilter
     }
     
     private func setupToolBar(selector: Selector) -> UIToolbar {
@@ -122,6 +124,8 @@ extension CarFilterHeaderView: UIPickerViewDataSource, UIPickerViewDelegate {
 extension CarFilterHeaderView {
     
     struct Data {
+        let makeFilter: String?
+        let modelFilter: String?
         let makeList: [String]?
         let modelList: [String]?
         let applyFilterMake: (String?) -> Void
