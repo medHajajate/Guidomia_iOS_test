@@ -112,6 +112,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="filterView" destination="2DQ-AT-Y04" id="ytI-Ah-RiJ"/>
+                <outlet property="makeTextField" destination="cPc-3r-raP" id="EUB-UF-yuR"/>
+                <outlet property="modelTextField" destination="3xr-rA-Gs5" id="oF1-Yg-bxi"/>
+            </connections>
             <point key="canvasLocation" x="177.09923664122135" y="159.85915492957747"/>
         </tableViewCell>
     </objects>

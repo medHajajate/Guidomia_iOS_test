@@ -19,6 +19,7 @@ class CarsListViewModel {
     var service: CarsListService
     let builder = BuilderCarsList()
     var carsList = [CarInfosViewCell.Data]()
+    var filterData: CarFilterHeaderView.Data?
     
     // MARK: - Initializers
     
@@ -34,6 +35,7 @@ class CarsListViewModel {
             case .success(let list):
                 print(list)
                 self.carsList = self.builder.buildCarsList(cars: list)
+                self.filterData = self.builder.buildFilterList(cars: list)
                 self.selectedCar(index: self.carsList.startIndex)
                 self.delegate?.reloadData()
             case.failure( let error):

@@ -92,6 +92,7 @@ extension CarsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard section == 0 else { return nil }
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: CarFilterHeaderView.className) as? CarFilterHeaderView
+        view?.config(with: viewModel.filterData)
         return view
     }
     

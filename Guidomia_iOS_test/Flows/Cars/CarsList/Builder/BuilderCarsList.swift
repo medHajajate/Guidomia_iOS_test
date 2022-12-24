@@ -14,6 +14,12 @@ class BuilderCarsList {
         return cars.map { buildCellData(car: $0)}
     }
     
+    func buildFilterList(cars: [Car]) -> CarFilterHeaderView.Data {
+        let makeList = cars.map { $0.make }.compactMap { $0 }
+        let modelList = cars.map { $0.model }.compactMap { $0 }
+        return .init(makeList: makeList, modelList: modelList)
+    }
+    
     private func buildCellData(car: Car) -> CarInfosViewCell.Data {
         CarInfosViewCell.Data(icon: car.make,
                               name: car.model,
