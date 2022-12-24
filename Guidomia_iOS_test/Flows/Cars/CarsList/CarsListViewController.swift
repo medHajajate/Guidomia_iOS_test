@@ -61,11 +61,11 @@ extension CarsListViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: UITableViewDataSource, UITableViewDelegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.viewDataList.count
+        return viewModel.noDataList ? 1 : viewModel.viewDataList.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.noDataList ? 0 : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,10 +77,11 @@ extension CarsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 24
+        return viewModel.noDataList ? 0 : 24
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard !viewModel.noDataList else { return UIView() }
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: CarsListSeparationViewFooter.className) as? CarsListSeparationViewFooter
         return view
     }

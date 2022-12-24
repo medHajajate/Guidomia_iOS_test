@@ -16,3 +16,14 @@ class Car: Decodable {
     var consList: [String?]?
     var prosList: [String?]?
 }
+
+extension Car: Hashable {
+    static func == (lhs: Car, rhs: Car) -> Bool {
+        return lhs.make == rhs.make && lhs.model == rhs.model
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(make)
+        hasher.combine(model)
+    }
+}

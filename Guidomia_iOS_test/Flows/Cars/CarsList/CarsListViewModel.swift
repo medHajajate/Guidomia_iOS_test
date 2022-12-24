@@ -22,6 +22,13 @@ class CarsListViewModel {
     var viewDataList = [CarInfosViewCell.Data]()
     var filterData: CarFilterHeaderView.Data?
     
+    var noDataList: Bool {
+        return viewDataList.count == 0
+    }
+    
+    var filterMake: String?
+    var filterModel: String?
+
     // MARK: - Initializers
     
     init() {
@@ -48,14 +55,12 @@ class CarsListViewModel {
     
     func buildFilterList(cars: [Car]) {
         let applyFilterMake: (String?) -> Void =  { make in
-            let filterdList = cars.filter { $0.make == make }
-            self.viewDataList = self.builder.buildCarsList(cars: filterdList)
-            self.didSelectCar(index: self.viewDataList.startIndex)
+            self.filterMake = make
+            self.applyFilter()
         }
         let applyFilterModel: (String?) -> Void = { model in
-            let filterdList = cars.filter { $0.model == model }
-            self.viewDataList = self.builder.buildCarsList(cars: filterdList)
-            self.didSelectCar(index: self.viewDataList.startIndex)
+            self.filterModel = model
+            self.applyFilter()
         }
         self.filterData = self.builder.buildFilterList(cars: cars, filterMake: applyFilterMake, filterModel: applyFilterModel)
     }
@@ -69,5 +74,23 @@ class CarsListViewModel {
         for i in 0 ..< viewDataList.count {
             viewDataList[i].isExpandable = i == index
         }
+    }
+    
+    private func applyFilter() {
+        
+        let filterdList = cars.filter { car in
+            if let make = filterMake, car.make != make {
+                return false
+            }
+            
+            if let model = filterModel, car.model != model {
+                return false
+            }
+            
+            return true
+            
+        }
+        self.viewDataList = self.builder.buildCarsList(cars: Array(Set(filterdList)))
+        self.didSelectCar(index: self.viewDataList.startIndex)
     }
 }
