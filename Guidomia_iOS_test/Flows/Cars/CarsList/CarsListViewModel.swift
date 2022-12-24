@@ -18,7 +18,8 @@ class CarsListViewModel {
     weak var delegate: CarsListViewModelDelegate?
     var service: CarsListService
     let builder = BuilderCarsList()
-    var carsList = [CarInfosViewCell.Data]()
+    var cars = [Car]()
+    var viewDataList = [CarInfosViewCell.Data]()
     var filterData: CarFilterHeaderView.Data?
     
     // MARK: - Initializers
@@ -34,15 +35,29 @@ class CarsListViewModel {
             switch result {
             case .success(let list):
                 print(list)
-                self.carsList = self.builder.buildCarsList(cars: list)
-                self.filterData = self.builder.buildFilterList(cars: list)
-                self.selectedCar(index: self.carsList.startIndex)
-                self.delegate?.reloadData()
+                self.cars = list
+                self.viewDataList = self.builder.buildCarsList(cars: list)
+                self.buildFilterList(cars: list)
+                self.didSelectCar(index: self.viewDataList.startIndex)
             case.failure( let error):
-                self.carsList = []
+                self.viewDataList = []
                 print(error)
             }
         }
+    }
+    
+    func buildFilterList(cars: [Car]) {
+        let applyFilterMake: (String?) -> Void =  { make in
+            let filterdList = cars.filter { $0.make == make }
+            self.viewDataList = self.builder.buildCarsList(cars: filterdList)
+            self.didSelectCar(index: self.viewDataList.startIndex)
+        }
+        let applyFilterModel: (String?) -> Void = { model in
+            let filterdList = cars.filter { $0.model == model }
+            self.viewDataList = self.builder.buildCarsList(cars: filterdList)
+            self.didSelectCar(index: self.viewDataList.startIndex)
+        }
+        self.filterData = self.builder.buildFilterList(cars: cars, filterMake: applyFilterMake, filterModel: applyFilterModel)
     }
     
     func didSelectCar(index: Int) {
@@ -51,8 +66,8 @@ class CarsListViewModel {
     }
     
     private func selectedCar(index: Int) {
-        for i in 0 ..< carsList.count {
-            carsList[i].isExpandable = i == index
+        for i in 0 ..< viewDataList.count {
+            viewDataList[i].isExpandable = i == index
         }
     }
 }

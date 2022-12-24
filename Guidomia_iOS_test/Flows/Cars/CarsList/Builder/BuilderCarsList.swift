@@ -14,10 +14,16 @@ class BuilderCarsList {
         return cars.map { buildCellData(car: $0)}
     }
     
-    func buildFilterList(cars: [Car]) -> CarFilterHeaderView.Data {
-        let makeList = cars.map { $0.make }.compactMap { $0 }
-        let modelList = cars.map { $0.model }.compactMap { $0 }
-        return .init(makeList: makeList, modelList: modelList)
+    func buildFilterList(cars: [Car], filterMake: @escaping (String?) -> Void, filterModel: @escaping (String?) -> Void) -> CarFilterHeaderView.Data {
+        var makeList = cars.map { $0.make }.compactMap { $0 }
+        var modelList = cars.map { $0.model }.compactMap { $0 }
+        makeList.insert("", at: 0)
+        modelList.insert("", at: 0)
+        return .init(makeList: makeList,
+                     modelList: modelList,
+                     applyFilterMake: filterMake,
+                     applyFilterModel: filterModel
+        )
     }
     
     private func buildCellData(car: Car) -> CarInfosViewCell.Data {

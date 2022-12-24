@@ -51,7 +51,7 @@ class CarFilterHeaderView: UITableViewHeaderFooterView {
         makePiker?.delegate = self
         makePiker?.dataSource = self
         makeTextField.inputView = makePiker
-        makeTextField.inputAccessoryView = setupToolBar()
+        makeTextField.inputAccessoryView = setupToolBar(selector: #selector(didSelectMake))
     }
     
     private func configModelPicker() {
@@ -60,17 +60,17 @@ class CarFilterHeaderView: UITableViewHeaderFooterView {
         modelPiker?.delegate = self
         modelPiker?.dataSource = self
         modelTextField.inputView = modelPiker
-        modelTextField.inputAccessoryView = setupToolBar()
+        modelTextField.inputAccessoryView = setupToolBar(selector: #selector(didSelectModel))
     }
     
-    private func setupToolBar() -> UIToolbar {
+    private func setupToolBar(selector: Selector) -> UIToolbar {
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
         toolBar.tintColor = .black
         toolBar.sizeToFit()
 
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: selector)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.done, target: self, action: #selector(dismissPicker))
 
@@ -81,6 +81,18 @@ class CarFilterHeaderView: UITableViewHeaderFooterView {
     
     @objc private func dismissPicker() {
         self.makeTextField.resignFirstResponder()
+        self.modelTextField.resignFirstResponder()
+    }
+    
+    @objc private func didSelectMake() {
+        guard let text = makeTextField.text, text != "" else { return }
+        self.data?.applyFilterMake(text)
+        self.makeTextField.resignFirstResponder()
+    }
+    
+    @objc private func didSelectModel() {
+        guard let text = modelTextField.text, text != "" else { return }
+        self.data?.applyFilterModel(text)
         self.modelTextField.resignFirstResponder()
     }
 }
@@ -112,5 +124,7 @@ extension CarFilterHeaderView {
     struct Data {
         let makeList: [String]?
         let modelList: [String]?
+        let applyFilterMake: (String?) -> Void
+        let applyFilterModel: (String?) -> Void
     }
 }
