@@ -8,19 +8,18 @@
 import UIKit
 
 protocol Coordinator : AnyObject {
-    var parentCoordinator: Coordinator? { get set }
+    var parentCoordinator: AppCoordinator? { get }
     var navigationController : UINavigationController { get set }
-    
     func start()
 }
 
-
-class AppCoordinator : Coordinator {
-    var parentCoordinator: Coordinator?
-    
-    var children: [Coordinator] = []
+class AppCoordinator {
     
     var navigationController: UINavigationController
+    
+    // MARK: Childs Coordinator
+    
+    var carsFlowCoordinator: CarsFlowCoordinator?
     
     init(navigationController : UINavigationController) {
         self.navigationController = navigationController
@@ -33,7 +32,13 @@ class AppCoordinator : Coordinator {
     func openCarsFlow() {
         let coordinator = CarsFlowCoordinator(navigationController: navigationController)
         coordinator.parentCoordinator = self
-        children.append(coordinator)
+        coordinator.delegate = self
+        self.carsFlowCoordinator = coordinator
         coordinator.start()
     }
+}
+
+extension AppCoordinator: CarsFlowCoordinatorDelegate {
+    
+    func openNextViewController() {}
 }

@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol CarsFlowCoordinatorDelegate: AnyObject {
+    func openNextViewController()
+}
+
 class CarsFlowCoordinator: Coordinator {
-    var parentCoordinator: Coordinator?
-        
+    
+    var parentCoordinator: AppCoordinator?
     var navigationController: UINavigationController
+    weak var delegate: CarsFlowCoordinatorDelegate?
     
     init(navigationController : UINavigationController) {
         self.navigationController = navigationController
