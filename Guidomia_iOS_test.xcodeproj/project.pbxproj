@@ -716,6 +716,7 @@
 				DEVELOPMENT_TEAM = 44M37ZLK2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Guidomia_iOS_test/AppConfig/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Guidomia;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -744,6 +745,7 @@
 				DEVELOPMENT_TEAM = 44M37ZLK2F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Guidomia_iOS_test/AppConfig/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Guidomia;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
