@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106026F5295902D200FD69C2 /* CarListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106026F4295902D200FD69C2 /* CarListViewModelTest.swift */; };
+		106026F72959082100FD69C2 /* CarsListServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106026F62959082100FD69C2 /* CarsListServiceTest.swift */; };
+		106026F92959083D00FD69C2 /* BuilderCarsListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106026F82959083D00FD69C2 /* BuilderCarsListTest.swift */; };
+		106026FC2959089900FD69C2 /* invalid_test_car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 106026FB2959089900FD69C2 /* invalid_test_car_list.json */; };
+		106026FF29590A0500FD69C2 /* CarListServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106026FE29590A0500FD69C2 /* CarListServiceMock.swift */; };
+		1060270129590D0C00FD69C2 /* test_car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 106026FD295908B800FD69C2 /* test_car_list.json */; };
+		1060270229590DD100FD69C2 /* test_car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 106026FD295908B800FD69C2 /* test_car_list.json */; };
+		1060270329590DD600FD69C2 /* invalid_test_car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 106026FB2959089900FD69C2 /* invalid_test_car_list.json */; };
+		1060270A2959194800FD69C2 /* JSONFileParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106027092959194800FD69C2 /* JSONFileParserTest.swift */; };
 		107C4AE92954E23F0078893A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AE82954E23F0078893A /* AppCoordinator.swift */; };
 		107C4AED2954E30C0078893A /* CarsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107C4AEB2954E30C0078893A /* CarsListViewController.swift */; };
 		107C4AEE2954E30C0078893A /* CarsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107C4AEC2954E30C0078893A /* CarsListViewController.xib */; };
@@ -55,6 +64,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		106026F4295902D200FD69C2 /* CarListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModelTest.swift; sourceTree = "<group>"; };
+		106026F62959082100FD69C2 /* CarsListServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListServiceTest.swift; sourceTree = "<group>"; };
+		106026F82959083D00FD69C2 /* BuilderCarsListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderCarsListTest.swift; sourceTree = "<group>"; };
+		106026FB2959089900FD69C2 /* invalid_test_car_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalid_test_car_list.json; sourceTree = "<group>"; };
+		106026FD295908B800FD69C2 /* test_car_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test_car_list.json; sourceTree = "<group>"; };
+		106026FE29590A0500FD69C2 /* CarListServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListServiceMock.swift; sourceTree = "<group>"; };
+		106027092959194800FD69C2 /* JSONFileParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileParserTest.swift; sourceTree = "<group>"; };
 		107C4AE82954E23F0078893A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		107C4AEB2954E30C0078893A /* CarsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListViewController.swift; sourceTree = "<group>"; };
 		107C4AEC2954E30C0078893A /* CarsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsListViewController.xib; sourceTree = "<group>"; };
@@ -114,6 +130,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106026F3295900EA00FD69C2 /* CarListFlow */ = {
+			isa = PBXGroup;
+			children = (
+				106027072959190A00FD69C2 /* Service */,
+				10602706295918F600FD69C2 /* Builder */,
+				10602705295918EB00FD69C2 /* ViewModel */,
+				10602704295918DD00FD69C2 /* Mock */,
+			);
+			path = CarListFlow;
+			sourceTree = "<group>";
+		};
+		106026FA2959085100FD69C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				106026FD295908B800FD69C2 /* test_car_list.json */,
+				106026FB2959089900FD69C2 /* invalid_test_car_list.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		10602704295918DD00FD69C2 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				106026FE29590A0500FD69C2 /* CarListServiceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		10602705295918EB00FD69C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				106026F4295902D200FD69C2 /* CarListViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		10602706295918F600FD69C2 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				106026F82959083D00FD69C2 /* BuilderCarsListTest.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		106027072959190A00FD69C2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				106026F62959082100FD69C2 /* CarsListServiceTest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		106027082959191C00FD69C2 /* ParserJSON */ = {
+			isa = PBXGroup;
+			children = (
+				106027092959194800FD69C2 /* JSONFileParserTest.swift */,
+			);
+			path = ParserJSON;
+			sourceTree = "<group>";
+		};
 		107C4AEA2954E2E50078893A /* CarsList */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +337,9 @@
 		2B13A1FF2953AC9E00894DB7 /* Guidomia_iOS_testTests */ = {
 			isa = PBXGroup;
 			children = (
+				106027082959191C00FD69C2 /* ParserJSON */,
+				106026FA2959085100FD69C2 /* Resources */,
+				106026F3295900EA00FD69C2 /* CarListFlow */,
 				2B13A2002953AC9E00894DB7 /* Guidomia_iOS_testTests.swift */,
 			);
 			path = Guidomia_iOS_testTests;
@@ -408,7 +487,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1060270229590DD100FD69C2 /* test_car_list.json in Resources */,
 				10F63C8329566E5B00823DDA /* CarFilterHeaderView.xib in Resources */,
+				1060270329590DD600FD69C2 /* invalid_test_car_list.json in Resources */,
 				2B13A1F62953AC9E00894DB7 /* LaunchScreen.storyboard in Resources */,
 				107C4AF72954ED3B0078893A /* CarInfosViewCell.xib in Resources */,
 				2B13A1F32953AC9E00894DB7 /* Assets.xcassets in Resources */,
@@ -423,6 +504,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1060270129590D0C00FD69C2 /* test_car_list.json in Resources */,
+				106026FC2959089900FD69C2 /* invalid_test_car_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +547,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106026FF29590A0500FD69C2 /* CarListServiceMock.swift in Sources */,
+				106026F92959083D00FD69C2 /* BuilderCarsListTest.swift in Sources */,
+				1060270A2959194800FD69C2 /* JSONFileParserTest.swift in Sources */,
 				2B13A2012953AC9E00894DB7 /* Guidomia_iOS_testTests.swift in Sources */,
+				106026F72959082100FD69C2 /* CarsListServiceTest.swift in Sources */,
+				106026F5295902D200FD69C2 /* CarListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

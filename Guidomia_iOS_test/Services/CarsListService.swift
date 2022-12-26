@@ -7,7 +7,11 @@
 
 import Foundation
 
-class CarsListService {
+protocol CarsListServiceProtocol {
+    func fetchCarList(completion: @escaping (Result<[Car], Error>) -> Void)
+}
+
+class CarsListService: CarsListServiceProtocol {
     
     var dataParser: JSONFileParser
     

@@ -16,7 +16,7 @@ class CarsListViewModel {
     // MARK: - Properties
     
     weak var delegate: CarsListViewModelDelegate?
-    var service: CarsListService
+    var service: CarsListServiceProtocol
     let builder = BuilderCarsList()
     var cars = [Car]()
     var viewDataList = [CarInfosViewCell.Data]()
@@ -31,8 +31,8 @@ class CarsListViewModel {
 
     // MARK: - Initializers
     
-    init() {
-        self.service = CarsListService(dataParser: JSONFileParser())
+    init(service: CarsListServiceProtocol) {
+        self.service = service
     }
     
     // MARK: - Methods
@@ -88,7 +88,7 @@ class CarsListViewModel {
         }
     }
     
-    private func applyFilter() {
+    func applyFilter() {
         
         let filterdList = cars.filter { car in
             if let make = filterMake, car.make != make {

@@ -23,7 +23,9 @@ class CarsFlowCoordinator: Coordinator {
     }
     
     func start() {
-        let carsListViewController = CarsListViewController.instantiate(viewModel: CarsListViewModel())
+        let service = CarsListService(dataParser: JSONFileParser())
+        let viewModel = CarsListViewModel(service: service)
+        let carsListViewController = CarsListViewController.instantiate(viewModel: viewModel)
         self.navigationController.pushViewController(carsListViewController, animated: true)
     }
     
